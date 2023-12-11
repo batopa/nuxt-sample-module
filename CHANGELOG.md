@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v0.0.3
+
+
+### 🤖 CI
+
+- **fix:** Configure registry url ([d2b0ca0](https://github.com/batopa/nuxt-sample-module/commit/d2b0ca0))
+
+### ❤️ Contributors
+
+- Batopa ([@batopa](http://github.com/batopa))
+
 ## v0.0.2
 
 
