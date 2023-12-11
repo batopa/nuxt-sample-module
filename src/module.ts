@@ -1,7 +1,7 @@
 import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
 
 // Module options TypeScript interface definition blabla blabla
-// description of module here
+// description of module here and there
 // here the author
 export interface ModuleOptions {}
 
