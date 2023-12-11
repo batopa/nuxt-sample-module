@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v0.0.7
+
+
+### 🩹 Fixes
+
+- Bla bla ([a5e0b40](https://github.com/batopa/nuxt-sample-module/commit/a5e0b40))
+
+### ❤️ Contributors
+
+- Batopa ([@batopa](http://github.com/batopa))
+
 ## v0.0.6
 
 ## v0.0.5
