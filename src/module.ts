@@ -1,6 +1,6 @@
 import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
 
-// Module options TypeScript interface definition blabla blabla bla bla
+// Module options TypeScript interface definition blabla blabla
 export interface ModuleOptions {}
 
 export default defineNuxtModule<ModuleOptions>({
@@ -8,7 +8,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxt-sample-module',
     configKey: 'sampleModule'
   },
-  // Default configuration options of the Nuxt module cia'
+  // Default configuration options of the Nuxt module ciaoooo
   defaults: {},
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
