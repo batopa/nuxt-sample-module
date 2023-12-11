@@ -8,12 +8,12 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxt-sample-module',
     configKey: 'sampleModule'
   },
-  // Default configuration options of the Nuxt module
+  // Default configuration options of the Nuxt module cia'
   defaults: {},
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
+    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack` jakshdkasdh
     addPlugin(resolver.resolve('./runtime/plugin'))
   }
 })
