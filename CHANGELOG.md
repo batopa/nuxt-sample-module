@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v0.0.10
+
+
+### 🚀 Enhancements
+
+- Introduce exclamation ([#5](https://github.com/batopa/nuxt-sample-module/pull/5))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](http://github.com/batopa))
+
 ## v0.0.9
 
 ## v0.0.8
