@@ -4,6 +4,7 @@ import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
 // description of module here and there
 // here the author
 // incredible breaking change feature
+// patch changes
 export interface ModuleOptions {}
 
 export default defineNuxtModule<ModuleOptions>({
