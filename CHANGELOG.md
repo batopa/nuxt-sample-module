@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.5
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.1.4...v0.1.5)
+
+### 🤖 CI
+
+- Release test ([#15](https://github.com/batopa/nuxt-sample-module/pull/15))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](http://github.com/batopa))
+
 ## v0.1.4
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.1.3...v0.1.4)
