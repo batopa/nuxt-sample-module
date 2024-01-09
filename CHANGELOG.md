@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v0.1.0
+
+
+### 🚀 Enhancements
+
+- ⚠️  Breakling change feature ([#8](https://github.com/batopa/nuxt-sample-module/pull/8))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Breakling change feature ([#8](https://github.com/batopa/nuxt-sample-module/pull/8))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](http://github.com/batopa))
+
 ## v0.0.11
 
 ## v0.0.10
