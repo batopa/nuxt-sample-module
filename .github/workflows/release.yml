@@ -42,7 +42,7 @@ jobs:
         run: npm run dev:prepare
 
       - name: Git command for "to" of release
-        run: echo git rev-parse --abbrev-ref HEAD
+        run: git rev-parse --abbrev-ref HEAD
 
       - name: Major release
         if: contains(github.event.pull_request.labels.*.name, 'release:major')
