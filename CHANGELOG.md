@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v0.1.1
+
+
+### 🩹 Fixes
+
+- Other things ([#10](https://github.com/batopa/nuxt-sample-module/pull/10))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](http://github.com/batopa))
+
 ## v0.1.0
 
 
