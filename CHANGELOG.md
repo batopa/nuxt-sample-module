@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v0.7.1
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.7.0...v0.7.1)
+
 ## v0.7.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.6.2...v0.7.0)
