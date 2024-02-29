@@ -32,6 +32,9 @@ jobs:
     if: github.event.pull_request.merged || ${{ inputs.releaseType != '' }}
     runs-on: 'ubuntu-latest'
     steps:
+      - name: Debug releaseType
+        run: |
+          echo "RELEASE TYPE: ${{ inputs.releaseType }}"
 
       - name: Checkout
         uses: actions/checkout@v4
