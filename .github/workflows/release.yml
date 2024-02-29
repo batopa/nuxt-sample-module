@@ -28,7 +28,7 @@ jobs:
         run: |
           echo "$GITHUB_CONTEXT"
   release-on-push:
-    if: github.event.pull_request.merged || ${{ inputs.releaseType }}
+    if: github.event.pull_request.merged || ${{ inputs.releaseType != '' }}
     runs-on: 'ubuntu-latest'
     steps:
 
@@ -58,21 +58,21 @@ jobs:
         run: git rev-parse --abbrev-ref HEAD
 
       - name: Major release
-        if: contains(github.event.pull_request.labels.*.name, 'release:major') || ${{ inputs.releaseType }} == 'major'
+        if: contains(github.event.pull_request.labels.*.name, 'release:major') || ${{ inputs.releaseType == 'major' }}
         run: npm run release:major
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Minor release
-        if: contains(github.event.pull_request.labels.*.name, 'release:minor') || ${{ inputs.releaseType }} == 'minor'
+        if: contains(github.event.pull_request.labels.*.name, 'release:minor') || ${{ inputs.releaseType == 'minor' }}
         run: npm run release:minor
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Patch release
-        if: contains(github.event.pull_request.labels.*.name, 'release:patch') || ${{ inputs.releaseType }} == 'patch'
+        if: contains(github.event.pull_request.labels.*.name, 'release:patch') || ${{ inputs.releaseType == 'patch' }}
         run: npm run release:patch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
