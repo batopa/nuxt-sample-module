@@ -33,6 +33,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: Debug releaseType
+        if: inputs.releaseType != ''
         run: |
           echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
 
@@ -63,27 +64,27 @@ jobs:
 
       - name: Major release
         if: contains(github.event.pull_request.labels.*.name, 'release:major') || inputs.releaseType == 'major'
-        #run: npm run release:major
-        run: |
-          echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
+        run: npm run release:major
+        #run: |
+        #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Minor release
         if: contains(github.event.pull_request.labels.*.name, 'release:minor') || inputs.releaseType == 'minor'
-        #run: npm run release:minor
-        run: |
-          echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
+        run: npm run release:minor
+        #run: |
+        #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Patch release
         if: contains(github.event.pull_request.labels.*.name, 'release:patch') || inputs.releaseType == 'patch'
-        #run: npm run release:patch
-        run: |
-          echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
+        run: npm run release:patch
+        #run: |
+        #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
