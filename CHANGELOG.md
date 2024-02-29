@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.1.8...v0.2.0)
+
+### 🩹 Fixes
+
+- App base url for github pages ([9007405](https://github.com/batopa/nuxt-sample-module/commit/9007405))
+
+### 📖 Documentation
+
+- Add docs project ([c8ca895](https://github.com/batopa/nuxt-sample-module/commit/c8ca895))
+- Update README.md ([d22e625](https://github.com/batopa/nuxt-sample-module/commit/d22e625))
+
+### 🤖 CI
+
+- Docs deploy ([20734f8](https://github.com/batopa/nuxt-sample-module/commit/20734f8))
+- Another doc try ([b46167a](https://github.com/batopa/nuxt-sample-module/commit/b46167a))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](http://github.com/batopa))
+- Batopa ([@batopa](http://github.com/batopa))
+
 ## v0.1.8
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.1.7...v0.1.8)
