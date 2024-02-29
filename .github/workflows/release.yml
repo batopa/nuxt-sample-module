@@ -29,12 +29,12 @@ jobs:
           echo "$GITHUB_CONTEXT"
           echo "${{ inputs.releaseType }}"
   release-on-push:
-    if: github.event.pull_request.merged || ${{ inputs.releaseType != '' }}
+    if: github.event.pull_request.merged || ${{ inputs.releaseType }}
     runs-on: 'ubuntu-latest'
     steps:
       - name: Debug releaseType
         run: |
-          echo "RELEASE TYPE: ${{ inputs.releaseType }}"
+          echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
 
       - name: Checkout
         uses: actions/checkout@v4
