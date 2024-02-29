@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v0.7.3
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.7.2...v0.7.3)
+
+### 🤖 CI
+
+- Debugging ([6022c43](https://github.com/batopa/nuxt-sample-module/commit/6022c43))
+- Debug ([63f6893](https://github.com/batopa/nuxt-sample-module/commit/63f6893))
+- Restore release version ([4d4acae](https://github.com/batopa/nuxt-sample-module/commit/4d4acae))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](http://github.com/batopa))
+
 ## v0.7.2
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.7.1...v0.7.2)
