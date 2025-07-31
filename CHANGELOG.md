@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.0-alpha.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.8.0...v1.0.0-alpha.0)
+
+### 🚀 Enhancements
+
+- Premajor testing ([#19](https://github.com/batopa/nuxt-sample-module/pull/19))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](http://github.com/batopa))
+
 ## v0.8.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v0.7.4...v0.8.0)
