@@ -29,6 +29,9 @@
     "release:patch": "npm run prepack && changelogen --release --patch --push",
     "release:minor": "npm run prepack && changelogen --release --minor --push",
     "release:major": "npm run prepack && changelogen --release --major --push",
+    "release:alpha": "npm run prepack && changelogen --release --premajor alpha --push",
+    "release:beta": "npm run prepack && changelogen --release --premajor beta --push",
+    "release:rc": "npm run prepack && changelogen --release --premajor rc --push",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
