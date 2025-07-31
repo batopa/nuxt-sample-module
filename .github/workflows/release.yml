@@ -16,6 +16,9 @@ on:
           - patch
           - minor
           - major
+          - premajor-alpha
+          - premajor-beta
+          - premajor-rc
 
 jobs:
   debug:
@@ -83,6 +86,33 @@ jobs:
       - name: Patch release
         if: contains(github.event.pull_request.labels.*.name, 'release:patch') || inputs.releaseType == 'patch'
         run: npm run release:patch
+        #run: |
+        #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Premajor alpha release
+        if: contains(github.event.pull_request.labels.*.name, 'release:alpha') || inputs.releaseType == 'premajor-alpha'
+        run: npm run release:alpha
+        #run: |
+        #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Premajor beta release
+        if: contains(github.event.pull_request.labels.*.name, 'release:beta') || inputs.releaseType == 'premajor-beta'
+        run: npm run release:beta
+        #run: |
+        #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Premajor rc release
+        if: contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.releaseType == 'premajor-rc'
+        run: npm run release:rc
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
         env:
