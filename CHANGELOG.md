@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.0.1-alpha.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v3.0.0...v3.0.1-alpha.0)
+
+### 🤖 CI
+
+- Fix major release ([2308df2](https://github.com/batopa/nuxt-sample-module/commit/2308df2))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v3.0.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v3.0.0-rc.0...v3.0.0)
