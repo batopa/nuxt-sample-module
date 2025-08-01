@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.0.0-alpha.2
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v4.0.0-alpha.1...v4.0.0-alpha.2)
+
+### 🤖 CI
+
+- Fix release conditions ([1c83833](https://github.com/batopa/nuxt-sample-module/commit/1c83833))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v4.0.0-alpha.1
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v4.0.0-alpha.0...v4.0.0-alpha.1)
