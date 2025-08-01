@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v3.0.0-beta.1
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v3.0.0-beta.0...v3.0.0-beta.1)
+
+### 🤖 CI
+
+- Handle prerelease ([1cb60f8](https://github.com/batopa/nuxt-sample-module/commit/1cb60f8))
+- Improve labels ([7344a34](https://github.com/batopa/nuxt-sample-module/commit/7344a34))
+- Improve preReleaseAction desc ([646aebf](https://github.com/batopa/nuxt-sample-module/commit/646aebf))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v3.0.0-beta.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v2.0.0-beta.0...v3.0.0-beta.0)
