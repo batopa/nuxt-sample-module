@@ -48,6 +48,8 @@ jobs:
   release-on-push:
     if: github.event.pull_request.merged || inputs.releaseType != ''
     runs-on: 'ubuntu-latest'
+    env:
+      PRE_RELEASE: contains(github.event.pull_request.labels.*.name, 'release:alpha') || contains(github.event.pull_request.labels.*.name, 'release:beta') || contains(github.event.pull_request.labels.*.name, 'release:rc')
     steps:
       - name: Debug releaseType
         if: inputs.releaseType != ''
@@ -80,7 +82,7 @@ jobs:
         run: git rev-parse --abbrev-ref HEAD
 
       - name: Major release
-        if: contains(github.event.pull_request.labels.*.name, 'release:major') || inputs.releaseType == 'major'
+        if: (!env.PRE_RELEASE && contains(github.event.pull_request.labels.*.name, 'release:major')) || inputs.releaseType == 'major'
         run: npm run release:major
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -89,7 +91,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Minor release
-        if: contains(github.event.pull_request.labels.*.name, 'release:minor') || inputs.releaseType == 'minor'
+        if: (!env.PRE_RELEASE && contains(github.event.pull_request.labels.*.name, 'release:minor')) || inputs.releaseType == 'minor'
         run: npm run release:minor
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -98,7 +100,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Patch release
-        if: contains(github.event.pull_request.labels.*.name, 'release:patch') || inputs.releaseType == 'patch'
+        if: (!env.PRE_RELEASE && contains(github.event.pull_request.labels.*.name, 'release:patch')) || inputs.releaseType == 'patch'
         run: npm run release:patch
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
