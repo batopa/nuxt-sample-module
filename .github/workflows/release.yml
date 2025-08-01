@@ -21,10 +21,12 @@ on:
           - rc
       preReleaseAction:
         description: |
-          'The pre-release action to take:
+          The pre-release action to take:
             - premajor (e.g., 1.x.x => 2.0.0-alpha.0)
             - prerelease (e.g., 2.0.0-alpha.0 => 2.0.0-alpha.1, 2.0.0-alpha.0 => 2.0.0-beta.0, etc.)
-          It works just for alpha, beta and rc release types.'
+            - none do nothing, no release will be made
+
+          It works just for alpha, beta and rc release types.
         required: false
         default: 'none'
         type: choice
