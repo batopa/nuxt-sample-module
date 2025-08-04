@@ -128,6 +128,7 @@ jobs:
         if: ${{ env.ALPHA_RELEASE && env.MAJOR_RELEASE }}
         #run: npm run release:alpha
         run: |
+          echo "condition ALPHA_RELEASE && MAJOR_RELEASE = ${{ env.ALPHA_RELEASE }} && ${{ env.MAJOR_RELEASE }} = ${{ env.ALPHA_RELEASE && env.MAJOR_RELEASE }}"
           echo "npm run release:alpha"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
