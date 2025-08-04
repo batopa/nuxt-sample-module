@@ -49,13 +49,13 @@ jobs:
     if: github.event.pull_request.merged || inputs.releaseType != ''
     runs-on: 'ubuntu-latest'
     env:
-      ALPHA_RELEASE: fromJson(contains(github.event.pull_request.labels.*.name, 'release:alpha') || inputs.releaseType == 'alpha')
-      BETA_RELEASE: fromJson(contains(github.event.pull_request.labels.*.name, 'release:beta') || inputs.releaseType == 'beta')
-      RC_RELEASE: fromJson(contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.releaseType == 'rc')
-      MAJOR_RELEASE: fromJson(contains(github.event.pull_request.labels.*.name, 'release:major') || (inputs.releaseType == 'major' || inputs.preReleaseAction == 'premajor'))
-      MINOR_RELEASE: fromJson(contains(github.event.pull_request.labels.*.name, 'release:minor') || inputs.releaseType == 'minor')
-      PATCH_RELEASE: fromJson(contains(github.event.pull_request.labels.*.name, 'release:patch') || inputs.releaseType == 'patch')
-      PRE_RELEASE: fromJson(contains(github.event.pull_request.labels.*.name, 'release:alpha') || contains(github.event.pull_request.labels.*.name, 'release:beta') || contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.preReleaseAction == 'prerelease')
+      ALPHA_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:alpha') || inputs.releaseType == 'alpha' }}
+      BETA_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:beta') || inputs.releaseType == 'beta' }}
+      RC_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.releaseType == 'rc' }}
+      MAJOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:major') || (inputs.releaseType == 'major' || inputs.preReleaseAction == 'premajor') }}
+      MINOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:minor') || inputs.releaseType == 'minor' }}
+      PATCH_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:patch') || inputs.releaseType == 'patch' }}
+      PRE_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:alpha') || contains(github.event.pull_request.labels.*.name, 'release:beta') || contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.preReleaseAction == 'prerelease' }}
     steps:
       - name: Debug releaseType
         if: inputs.releaseType != ''
