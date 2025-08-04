@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v21.0.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v21.0.0-alpha.0...v21.0.0)
+
+### 🤖 CI
+
+- Fix major release ([867022f](https://github.com/batopa/nuxt-sample-module/commit/867022f))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v21.0.0-alpha.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v20.0.0...v21.0.0-alpha.0)
