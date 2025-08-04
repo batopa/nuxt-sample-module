@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v17.0.0-alpha.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v16.0.0-rc.0...v17.0.0-alpha.0)
+
+### 🤖 CI
+
+- Debug ([6ab6796](https://github.com/batopa/nuxt-sample-module/commit/6ab6796))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v16.0.0-rc.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v15.0.0-beta.0...v16.0.0-rc.0)
