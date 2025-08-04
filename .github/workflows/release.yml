@@ -49,13 +49,13 @@ jobs:
     if: github.event.pull_request.merged || inputs.releaseType != ''
     runs-on: 'ubuntu-latest'
     env:
-      ALPHA_RELEASE: contains(github.event.pull_request.labels.*.name, 'release:alpha')
-      BETA_RELEASE: contains(github.event.pull_request.labels.*.name, 'release:beta')
-      RC_RELEASE: contains(github.event.pull_request.labels.*.name, 'release:rc')
-      MAJOR_RELEASE: contains(github.event.pull_request.labels.*.name, 'release:major')
-      MINOR_RELEASE: contains(github.event.pull_request.labels.*.name, 'release:minor')
-      PATCH_RELEASE: contains(github.event.pull_request.labels.*.name, 'release:patch')
-      PRE_RELEASE: contains(github.event.pull_request.labels.*.name, 'release:alpha') || contains(github.event.pull_request.labels.*.name, 'release:beta') || contains(github.event.pull_request.labels.*.name, 'release:rc')
+      ALPHA_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:alpha') || inputs.releaseType == 'alpha' }}
+      BETA_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:beta') || inputs.releaseType == 'beta' }}
+      RC_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.releaseType == 'rc' }}
+      MAJOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:major') || (inputs.releaseType == 'major' || inputs.preReleaseAction == 'premajor') }}
+      MINOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:minor') || inputs.releaseType == 'minor' }}
+      PATCH_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:patch') || inputs.releaseType == 'patch' }}
+      PRE_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:alpha') || contains(github.event.pull_request.labels.*.name, 'release:beta') || contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.preReleaseAction == 'prerelease' }}
     steps:
       - name: Debug releaseType
         if: inputs.releaseType != ''
@@ -88,7 +88,7 @@ jobs:
         run: git rev-parse --abbrev-ref HEAD
 
       - name: Major release
-        if: (!env.PRE_RELEASE && env.MAJOR_RELEASE) || inputs.releaseType == 'major'
+        if: ${{ env.MAJOR_RELEASE && ! env.PRE_RELEASE }}
         run: npm run release:major
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -97,7 +97,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Minor release
-        if: (!env.PRE_RELEASE && env.MINOR_RELEASE) || inputs.releaseType == 'minor'
+        if: ${{ env.MINOR_RELEASE && ! env.PRE_RELEASE }}
         run: npm run release:minor
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -106,7 +106,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Patch release
-        if: (!env.PRE_RELEASE && env.PATCH_RELEASE) || inputs.releaseType == 'patch'
+        if: ${{ env.PATCH_RELEASE && ! env.PRE_RELEASE }}
         run: npm run release:patch
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -115,7 +115,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Premajor alpha release
-        if: (env.ALPHA_RELEASE && env.MAJOR_RELEASE) || (inputs.releaseType == 'alpha' && inputs.preReleaseAction == 'premajor')
+        if: ${{ env.ALPHA_RELEASE && env.MAJOR_RELEASE }}
         run: npm run release:alpha
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -124,7 +124,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Prerelease alpha
-        if: (env.ALPHA_RELEASE && !env.MAJOR_RELEASE) || (inputs.releaseType == 'alpha' && inputs.preReleaseAction == 'prerelease')
+        if: ${{ env.ALPHA_RELEASE && ! env.MAJOR_RELEASE && env.PRE_RELEASE}}
         run: npm run prerelease:alpha
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -133,7 +133,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Premajor beta release
-        if: (env.BETA_RELEASE && env.MAJOR_RELEASE) || (inputs.releaseType == 'beta' && inputs.preReleaseAction == 'premajor')
+        if: ${{ env.BETA_RELEASE && env.MAJOR_RELEASE }}
         run: npm run release:beta
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -142,7 +142,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Prerelease beta
-        if: (env.BETA_RELEASE && !env.MAJOR_RELEASE) || (inputs.releaseType == 'beta' && inputs.preReleaseAction == 'prerelease')
+        if: ${{ env.BETA_RELEASE && ! env.MAJOR_RELEASE && env.PRE_RELEASE }}
         run: npm run prerelease:beta
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -151,7 +151,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Premajor rc release
-        if: (env.RC_RELEASE && env.MAJOR_RELEASE) || (inputs.releaseType == 'rc' && inputs.preReleaseAction == 'premajor')
+        if: ${{ env.RC_RELEASE && env.MAJOR_RELEASE }}
         run: npm run release:rc
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
@@ -160,7 +160,7 @@ jobs:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Prerelease rc
-        if: (env.RC_RELEASE && !env.MAJOR_RELEASE) || (inputs.releaseType == 'rc' && inputs.preReleaseAction == 'prerelease')
+        if: ${{ env.RC_RELEASE && !env.MAJOR_RELEASE && env.PRE_RELEASE }}
         run: npm run prerelease:rc
         #run: |
         #  echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
