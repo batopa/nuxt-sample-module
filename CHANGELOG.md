@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v22.0.0-alpha.1
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v22.0.0-alpha.0...v22.0.0-alpha.1)
+
+### 🤖 CI
+
+- Fix running script ([2aaf9dc](https://github.com/batopa/nuxt-sample-module/commit/2aaf9dc))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v22.0.0-alpha.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v21.0.0...v22.0.0-alpha.0)
