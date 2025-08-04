@@ -1,6 +1,6 @@
 {
   "name": "nuxt-sample-module",
-  "version": "10.0.0",
+  "version": "11.0.0-alpha.0",
   "description": "Testing code",
   "repository": {
     "type": "git",
