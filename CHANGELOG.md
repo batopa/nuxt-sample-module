@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v14.0.0-alpha.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v13.0.0-rc.0...v14.0.0-alpha.0)
+
+### 🤖 CI
+
+- Fix release conditions ([49ed348](https://github.com/batopa/nuxt-sample-module/commit/49ed348))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v13.0.0-rc.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v12.0.0-beta.0...v13.0.0-rc.0)
