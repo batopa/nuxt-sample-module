@@ -99,72 +99,56 @@ jobs:
 
       - name: Major release
         if: ${{ env.MAJOR_RELEASE == 'true' && env.PRE_RELEASE == 'false' }}
-        #run: npm run release:major
-        run: |
-          echo "npm run release:major"
+        run: npm run release:major
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Minor release
         if: ${{ env.MINOR_RELEASE == 'true' && env.PRE_RELEASE == 'false' }}
-        #run: npm run release:minor
-        run: |
-          echo "npm run release:minor"
+        run: npm run release:minor
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Patch release
         if: ${{ env.PATCH_RELEASE == 'true' && env.PRE_RELEASE == 'false' }}
-        #run: npm run release:patch
-        run: |
-          echo "npm run release:patch"
+        run: npm run release:patch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Premajor alpha release
         if: ${{ env.ALPHA_RELEASE == 'true' && env.MAJOR_RELEASE == 'true' }}
-        #run: npm run release:alpha
-        run: |
-          echo "condition ALPHA_RELEASE && MAJOR_RELEASE = ${{ env.ALPHA_RELEASE }} && ${{ env.MAJOR_RELEASE }} = ${{ env.ALPHA_RELEASE == 'true' && env.MAJOR_RELEASE == 'true' }}"
-          echo "npm run release:alpha"
+        run: npm run release:alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Prerelease alpha
         if: ${{ env.ALPHA_RELEASE == 'true' && env.MAJOR_RELEASE == 'false' && env.PRE_RELEASE == 'true' }}
-        #run: npm run prerelease:alpha
-        run: |
-          echo "npm run prerelease:alpha"
+        run: npm run prerelease:alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Premajor beta release
         if: ${{ env.BETA_RELEASE == 'true' && env.MAJOR_RELEASE == 'true' }}
-        #run: npm run release:beta
-        run: |
-          echo "npm run release:beta"
+        run: npm run release:beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Prerelease beta
         if: ${{ env.BETA_RELEASE == 'true' && env.MAJOR_RELEASE == 'false' && env.PRE_RELEASE == 'true' }}
-        #run: npm run prerelease:beta
-        run: |
-          echo "npm run prerelease:beta"
+        run: npm run prerelease:beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Premajor rc release
         if: ${{ env.RC_RELEASE == 'true' && env.MAJOR_RELEASE == 'true' }}
-        #run: npm run release:rc
-        run: |
+        run: npm run release:rc
           echo "npm run release:rc"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -172,9 +156,7 @@ jobs:
 
       - name: Prerelease rc
         if: ${{ env.RC_RELEASE == 'true' && env.MAJOR_RELEASE == 'false' && env.PRE_RELEASE == 'true' }}
-        #run: npm run prerelease:rc
-        run: |
-          echo "npm run prerelease:rc"
+        run: npm run prerelease:rc
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
