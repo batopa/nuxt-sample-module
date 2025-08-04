@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v7.0.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v7.0.0-rc.0...v7.0.0)
+
+### 🩹 Fixes
+
+- Avoid conflict with "pre" hooks in section scripts ([3cae504](https://github.com/batopa/nuxt-sample-module/commit/3cae504))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v7.0.0-rc.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v6.0.0-rc.0...v7.0.0-rc.0)
