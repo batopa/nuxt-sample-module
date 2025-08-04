@@ -55,7 +55,7 @@ jobs:
       MAJOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:major') || (inputs.releaseType == 'major' || inputs.preReleaseAction == 'premajor') }}
       MINOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:minor') || inputs.releaseType == 'minor' }}
       PATCH_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:patch') || inputs.releaseType == 'patch' }}
-      PRE_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:alpha') || contains(github.event.pull_request.labels.*.name, 'release:beta') || contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.preReleaseAction == 'prerelease' }}
+      PRE_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:alpha') || contains(github.event.pull_request.labels.*.name, 'release:beta') || contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.releaseType == 'alpha' || inputs.releaseType == 'beta' || inputs.releaseType == 'rc' || inputs.preReleaseAction == 'prerelease' }}
     steps:
       - name: Debug releaseType
         if: inputs.releaseType != ''
