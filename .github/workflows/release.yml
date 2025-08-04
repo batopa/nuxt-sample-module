@@ -22,8 +22,8 @@ on:
       preReleaseAction:
         description: |
           The pre-release action to take:
-            - premajor (e.g., 1.x.x => 2.0.0-alpha.0)
-            - prerelease (e.g., 2.0.0-alpha.0 => 2.0.0-alpha.1, 2.0.0-alpha.0 => 2.0.0-beta.0, etc.)
+            - pre-major (e.g., 1.x.x => 2.0.0-alpha.0)
+            - pre-release (e.g., 2.0.0-alpha.0 => 2.0.0-alpha.1, 2.0.0-alpha.0 => 2.0.0-beta.0, etc.)
             - none do nothing, no release will be made
 
           It works just for alpha, beta and rc release types.
@@ -32,8 +32,8 @@ on:
         type: choice
         options:
           - none
-          - premajor
-          - prerelease
+          - pre-major
+          - pre-release
 jobs:
   debug:
     if: github.event.pull_request.merged || inputs.releaseType != ''
@@ -52,7 +52,7 @@ jobs:
       ALPHA_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:alpha') || inputs.releaseType == 'alpha' }}
       BETA_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:beta') || inputs.releaseType == 'beta' }}
       RC_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.releaseType == 'rc' }}
-      MAJOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:major') || (inputs.releaseType == 'major' || inputs.preReleaseAction == 'premajor') }}
+      MAJOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:major') || (inputs.releaseType == 'major' || inputs.preReleaseAction == 'pre-major') }}
       MINOR_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:minor') || inputs.releaseType == 'minor' }}
       PATCH_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:patch') || inputs.releaseType == 'patch' }}
       PRE_RELEASE: ${{ contains(github.event.pull_request.labels.*.name, 'release:alpha') || contains(github.event.pull_request.labels.*.name, 'release:beta') || contains(github.event.pull_request.labels.*.name, 'release:rc') || inputs.releaseType == 'alpha' || inputs.releaseType == 'beta' || inputs.releaseType == 'rc' || inputs.preReleaseAction == 'prerelease' }}
@@ -127,7 +127,7 @@ jobs:
 
       - name: Prerelease alpha
         if: ${{ env.ALPHA_RELEASE == 'true' && env.MAJOR_RELEASE == 'false' && env.PRE_RELEASE == 'true' }}
-        run: npm run prerelease:alpha
+        run: npm run pre-release:alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -141,7 +141,7 @@ jobs:
 
       - name: Prerelease beta
         if: ${{ env.BETA_RELEASE == 'true' && env.MAJOR_RELEASE == 'false' && env.PRE_RELEASE == 'true' }}
-        run: npm run prerelease:beta
+        run: npm run pre-release:beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -156,7 +156,7 @@ jobs:
 
       - name: Prerelease rc
         if: ${{ env.RC_RELEASE == 'true' && env.MAJOR_RELEASE == 'false' && env.PRE_RELEASE == 'true' }}
-        run: npm run prerelease:rc
+        run: npm run pre-release:rc
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
