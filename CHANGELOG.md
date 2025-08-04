@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v19.0.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v19.0.0-rc.0...v19.0.0)
+
+### 🤖 CI
+
+- Debug ([5985048](https://github.com/batopa/nuxt-sample-module/commit/5985048))
+- Test ([bcac765](https://github.com/batopa/nuxt-sample-module/commit/bcac765))
+- Debug ([2a882f8](https://github.com/batopa/nuxt-sample-module/commit/2a882f8))
+- Another debug ([b9bdf45](https://github.com/batopa/nuxt-sample-module/commit/b9bdf45))
+- Again, debug ([1ddd3f1](https://github.com/batopa/nuxt-sample-module/commit/1ddd3f1))
+- Fix all conditions ([425a54d](https://github.com/batopa/nuxt-sample-module/commit/425a54d))
+- Activate releases! ([44c0b73](https://github.com/batopa/nuxt-sample-module/commit/44c0b73))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v19.0.0-rc.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v18.0.0-beta.0...v19.0.0-rc.0)

@@ -1,6 +1,6 @@
 {
   "name": "nuxt-sample-module",
-  "version": "19.0.0-rc.0",
+  "version": "19.0.0",
   "description": "Testing code",
   "repository": {
     "type": "git",
