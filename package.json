@@ -32,9 +32,9 @@
     "release:alpha": "npm run prepack && changelogen --release --premajor alpha --push",
     "release:beta": "npm run prepack && changelogen --release --premajor beta --push",
     "release:rc": "npm run prepack && changelogen --release --premajor rc --push",
-    "prerelease:alpha": "npm run prepack && changelogen --release --prerelease alpha --push",
-    "prerelease:beta": "npm run prepack && changelogen --release --prerelease beta --push",
-    "prerelease:rc": "npm run prepack && changelogen --release --prerelease rc --push",
+    "pre-release:alpha": "npm run prepack && changelogen --release --prerelease alpha --push",
+    "pre-release:beta": "npm run prepack && changelogen --release --prerelease beta --push",
+    "pre-release:rc": "npm run prepack && changelogen --release --prerelease rc --push",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
