@@ -62,6 +62,16 @@ jobs:
         run: |
           echo "RELEASE TYPE: ---${{ inputs.releaseType }}---"
 
+      - name: Debug variables
+        run: |
+          echo "ALPHA_RELEASE: ---${{ env.ALPHA_RELEASE }}---"
+          echo "BETA_RELEASE: ---${{ env.BETA_RELEASE }}---"
+          echo "RC_RELEASE: ---${{ env.RC_RELEASE }}---"
+          echo "MAJOR_RELEASE: ---${{ env.MAJOR_RELEASE }}---"
+          echo "MINOR_RELEASE: ---${{ env.MINOR_RELEASE }}---"
+          echo "PATCH_RELEASE: ---${{ env.PATCH_RELEASE }}---"
+          echo "PRE_RELEASE: ---${{ env.PRE_RELEASE }}---"
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
