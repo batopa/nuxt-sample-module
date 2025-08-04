@@ -6,7 +6,7 @@
 [![Nuxt][nuxt-src]][nuxt-href]
 
 This repo is used just for testing things. Do not use it.
-**WARNING:** DO NOT USE IT!!!!!
+**WARNING:** DO NOT USE IT!
 
 ## Quick Setup
 
