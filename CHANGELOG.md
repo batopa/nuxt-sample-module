@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v24.0.0-alpha.1
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.0...v24.0.0-alpha.1)
+
+### 🤖 CI
+
+- Update release.yml ([8b5914c](https://github.com/batopa/nuxt-sample-module/commit/8b5914c))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v24.0.0-alpha.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v23.0.0...v24.0.0-alpha.0)
