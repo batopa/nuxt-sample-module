@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v24.0.0-alpha.4
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.3...v24.0.0-alpha.4)
+
+### 🩹 Fixes
+
+- Package.json ([cbd9b7c](https://github.com/batopa/nuxt-sample-module/commit/cbd9b7c))
+- Update package.json ([5fc3c76](https://github.com/batopa/nuxt-sample-module/commit/5fc3c76))
+- Wrong typeswq ([5163bfd](https://github.com/batopa/nuxt-sample-module/commit/5163bfd))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v24.0.0-alpha.3
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.2...v24.0.0-alpha.3)
