@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v24.0.0-alpha.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v23.0.0...v24.0.0-alpha.0)
+
+### 🤖 CI
+
+- Restore npm publish ([743a809](https://github.com/batopa/nuxt-sample-module/commit/743a809))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v23.0.0
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v23.0.0-rc.1...v23.0.0)
