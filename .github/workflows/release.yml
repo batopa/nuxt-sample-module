@@ -34,6 +34,11 @@ on:
           - none
           - pre-major
           - pre-release
+
+permissions:
+  id-token: write  # Required for OIDC
+  contents: write
+
 jobs:
   debug:
     if: github.event.pull_request.merged || inputs.releaseType != ''
@@ -46,9 +51,6 @@ jobs:
           echo "$GITHUB_CONTEXT"
           echo "${{ inputs.releaseType }}"
   release-on-push:
-    permissions:
-      id-token: write  # Required for OIDC
-      contents: write
     if: github.event.pull_request.merged || inputs.releaseType != ''
     runs-on: 'ubuntu-latest'
     env:
