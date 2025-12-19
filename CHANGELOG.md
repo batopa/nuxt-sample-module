@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v24.0.0-alpha.3
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.2...v24.0.0-alpha.3)
+
+### 🤖 CI
+
+- Use node 24 ([1fe742f](https://github.com/batopa/nuxt-sample-module/commit/1fe742f))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v24.0.0-alpha.2
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.1...v24.0.0-alpha.2)
