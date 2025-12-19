@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v24.0.0-alpha.2
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.1...v24.0.0-alpha.2)
+
+### 🤖 CI
+
+- Fix npm publish using oidc part two ([8e07459](https://github.com/batopa/nuxt-sample-module/commit/8e07459))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v24.0.0-alpha.1
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.0...v24.0.0-alpha.1)
