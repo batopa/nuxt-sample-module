@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v23.0.0
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v23.0.0-rc.1...v23.0.0)
+
+### 🤖 CI
+
+- Use oidc for npm publish ([b78512a](https://github.com/batopa/nuxt-sample-module/commit/b78512a))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v23.0.0-rc.1
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v23.0.0-rc.0...v23.0.0-rc.1)
