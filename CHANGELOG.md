@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v24.0.0-alpha.6
+
+[compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.5...v24.0.0-alpha.6)
+
+### 🩹 Fixes
+
+- Release tag for publish npm pre-wqrelease ([b2547b2](https://github.com/batopa/nuxt-sample-module/commit/b2547b2))
+
+### ❤️ Contributors
+
+- Alberto Pagliarini ([@batopa](https://github.com/batopa))
+
 ## v24.0.0-alpha.5
 
 [compare changes](https://github.com/batopa/nuxt-sample-module/compare/v24.0.0-alpha.4...v24.0.0-alpha.5)
